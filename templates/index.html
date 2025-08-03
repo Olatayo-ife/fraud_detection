@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fraud Detection App</title>
+</head>
+<body>
+    <h2>Enter Transaction Details</h2>
+    <form action="/predict" method="post">
+        {% for i in range(30) %}
+            <input type="text" name="feature{{ i }}" placeholder="Feature {{ i + 1 }}" required><br><br>
+        {% endfor %}
+        <input type="submit" value="Predict">
+    </form>
+
+    <h3>{{ prediction_text }}</h3>
+</body>
+</html>
